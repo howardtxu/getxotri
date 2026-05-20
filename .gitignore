@@ -1,6 +1,6 @@
 .vscode/
-*.log
-.DS_Store
-Thumbs.db
 node_modules/
+.DS_Store
+*.log
+Thumbs.db
 dist/
