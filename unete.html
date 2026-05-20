@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Únete a Getxo Triatloi Taldea</title>
+    <!-- Color de la barra de direcciones en móviles -->
+    <meta name="theme-color" content="#7f1d1d">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <!-- Navbar -->
+    <nav aria-label="Navegación principal" class="bg-red-900 text-white p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3 hover:opacity-90 transition">
+                <img src="images/logo.png" alt="Logo Getxo Triatloi Taldea" class="h-12 w-auto bg-white rounded-full p-1">
+                <h1 class="text-xl md:text-2xl font-bold tracking-tighter">GETXO<span class="text-gray-300">TRI</span></h1>
+            </a>
+            <ul class="flex space-x-6">
+                <li><a href="index.html#entrenamientos" class="hover:text-gray-300 transition">Entrenamientos</a></li>
+                <li><a href="index.html#calendario" class="hover:text-gray-300 transition">Calendario</a></li>
+                <li><a href="unete.html" class="bg-white text-red-900 px-4 py-2 rounded font-bold hover:bg-gray-100 transition">¡Únete!</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="bg-gray-50 pb-20">
+        <!-- Hero de la página -->
+        <div class="bg-white py-20 border-b border-gray-100">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-sm font-bold text-red-700 uppercase tracking-[0.3em] mb-4">Forma parte del equipo</h2>
+                <h3 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">Desarrolla tu potencial<br>con nosotros.</h3>
+                <p class="text-xl text-gray-500 max-w-2xl mx-auto">Te acompañamos en cada paso, desde tu primera brazada hasta tu llegada a meta.</p>
+            </div>
+        </div>
+
+        <!-- Sección de Formulario y Beneficios (Grid Inspirado en Nicepage) -->
+        <div class="container mx-auto px-4 -mt-12">
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Columna de Beneficios (Estilo Nicepage Cards) -->
+                <div class="lg:col-span-2 grid md:grid-cols-2 gap-6">
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <div class="text-3xl mb-4 text-red-800">🎯</div>
+                        <h4 class="text-xl font-bold mb-3">Planes a medida</h4>
+                        <p class="text-gray-500 leading-relaxed">Entrenamientos adaptados a tu nivel, desde debutantes hasta expertos en Ironman.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <div class="text-3xl mb-4 text-red-800">🤝</div>
+                        <h4 class="text-xl font-bold mb-3">Grupo y Motivación</h4>
+                        <p class="text-gray-500 leading-relaxed">Entrenar solo es difícil. En equipo, los kilómetros pasan volando.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <div class="text-3xl mb-4 text-red-800">🏊‍♂️</div>
+                        <h4 class="text-xl font-bold mb-3">Técnica Profesional</h4>
+                        <p class="text-gray-500 leading-relaxed">Correcciones en video y sesiones dirigidas por entrenadores titulados.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <div class="text-3xl mb-4 text-red-800">🏟️</div>
+                        <h4 class="text-xl font-bold mb-3">Instalaciones</h4>
+                        <p class="text-gray-500 leading-relaxed">Acceso a las mejores piscinas y pistas de entrenamiento de Getxo.</p>
+                    </div>
+                </div>
+
+                <!-- Columna del Formulario (Tarjeta Destacada) -->
+                <div class="bg-white p-10 rounded-3xl shadow-xl border border-gray-100">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Empezar ahora</h3>
+                    <form action="#" method="POST" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-xs font-bold text-gray-400 uppercase mb-1">Nombre</label>
+                            <input type="text" name="name" id="name" required
+                                   class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-red-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-xs font-bold text-gray-400 uppercase mb-1">Email</label>
+                            <input type="email" name="email" id="email" required
+                                   class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-red-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-xs font-bold text-gray-400 uppercase mb-1">Teléfono</label>
+                            <input type="tel" name="phone" id="phone"
+                                   class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-red-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-xs font-bold text-gray-400 uppercase mb-1">Mensaje</label>
+                            <textarea id="message" name="message" rows="3" required 
+                                      class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-red-500 outline-none transition"></textarea>
+                        </div>
+                        <div class="flex items-start mb-4">
+                            <input id="privacy-policy" type="checkbox" required class="mt-1 h-4 w-4 text-red-900 border-gray-300 rounded">
+                            <label for="privacy-policy" class="ml-2 text-xs text-gray-400">
+                                Acepto los términos y la política de privacidad.
+                            </label>
+                        </div>
+                        <button type="submit"
+                                class="w-full py-4 bg-red-900 text-white rounded-xl font-bold shadow-lg hover:bg-red-800 transition transform hover:scale-[1.02]">
+                            Enviar Solicitud
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-red-950 text-white py-10 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-4">&copy; 2024 Getxo Triatloi Taldea. Todos los derechos reservados.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="hover:text-gray-300 transition">Instagram</a>
+                <a href="#" class="hover:text-gray-300 transition">Facebook</a>
+                <a href="#" class="hover:text-gray-300 transition">Strava</a>
+                <a href="https://github.com/jokintxu-bit/getxotri" class="hover:text-gray-300 transition" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
