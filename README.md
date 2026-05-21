@@ -2,6 +2,8 @@
 
 Sitio web oficial del club de triatlón de Getxo. Este proyecto busca centralizar la información sobre entrenamientos, calendarios y captación de nuevos socios.
 
+🔗 **Ver sitio en vivo:** [https://howardtxu.github.io/getxotri/](https://howardtxu.github.io/getxotri/)
+
 ## 🚀 Tecnologías utilizadas
 *   **HTML5** - Estructura semántica.
 *   **Tailwind CSS** - Framework de estilos para un diseño moderno y responsive.
