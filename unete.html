@@ -5,8 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Únete a Getxo Triatloi Taldea</title>
     <!-- Color de la barra de direcciones en móviles -->
-    <meta name="theme-color" content="#7f1d1d">
+    <meta name="theme-color" content="#70362a">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        red: {
+                            50: '#f8f2f1',
+                            700: '#944838',
+                            800: '#823f31',
+                            900: '#70362a', // RAL 3009 - Granate (Burdeos)
+                            950: '#4d251d', // Versión oscura para el footer
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         @font-face {
             font-family: 'Bauhaus 93';
@@ -38,7 +55,7 @@
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-sm font-bold text-red-700 uppercase tracking-[0.3em] mb-4">Un club abierto en un entorno único</h2>
                 <h3 class="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">Forma parte de nuestra<br>comunidad en Getxo.</h3>
-                <p class="text-xl text-gray-500 max-w-2xl mx-auto">En Getxo encontrarás tu equipo, más allá de un deporte individual. Ven a disfrutar de la pasión por el triatlón con nosotros.</p>
+                <p class="text-xl text-gray-500 max-w-2xl mx-auto">Seas de donde seas, en Fadura encontrarás tu equipo. Ven a disfrutar de la pasión por el triatlón con nosotros.</p>
             </div>
         </div>
 

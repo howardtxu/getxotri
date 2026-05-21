@@ -6,8 +6,25 @@
     <title>Getxo Triatloi Taldea - Supera tus límites</title>
     <meta name="description" content="Sitio oficial de Getxo Triatloi Taldea. Entrenamientos de natación, ciclismo y carrera en Fadura y el entorno de Getxo.">
     <!-- Color de la barra de direcciones en móviles -->
-    <meta name="theme-color" content="#7f1d1d">
+    <meta name="theme-color" content="#70362a">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        red: {
+                            50: '#f8f2f1',
+                            700: '#944838',
+                            800: '#823f31',
+                            900: '#70362a', // RAL 3009 - Granate (Burdeos)
+                            950: '#4d251d', // Versión oscura para el footer
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         @font-face {
             font-family: 'Bauhaus 93';
@@ -38,7 +55,7 @@
         <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&q=80&w=1600" alt="Triatletas compitiendo" class="absolute inset-0 w-full h-full object-cover brightness-50" fetchpriority="high">
         <div class="relative text-center px-4">
             <h2 class="text-5xl md:text-7xl font-extrabold mb-4 uppercase">Getxo Triatloi Taldea</h2>
-            <p class="text-xl md:text-2xl mb-8">Entrena con nosotros en Getxo y su entorno</p>
+            <p class="text-xl md:text-2xl mb-8">Entrena con nosotros en Fadura y descubre nuestras rutas por La Galea.</p>
             <a href="unete.html" class="bg-red-900 text-white px-8 py-3 rounded-full text-lg font-bold hover:bg-red-800 transition border-2 border-white">Saber más</a>
         </div>
     </header>
@@ -75,7 +92,11 @@
         <div class="container mx-auto px-4 text-center">
             <h3 class="text-3xl font-bold mb-6">Eventos que Organizamos</h3>
             <div class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-lg border-l-8 border-red-900">
-                <span class="text-red-900 font-bold uppercase tracking-widest text-sm">26 de septiembre · 16:30</span>
+                <div class="mb-2">
+                    <span class="text-red-900 font-bold uppercase tracking-widest text-sm">26 de septiembre · 16:30</span>
+                    <!-- Contenedor de la cuenta atrás -->
+                    <div id="countdown" class="text-2xl font-mono font-bold text-red-700 mt-2 flex justify-center gap-4"></div>
+                </div>
                 <h4 class="text-2xl font-bold text-gray-900 mt-2 mb-4">Memorial Agustín Ugarte</h4>
                 <p class="text-gray-600 mb-6">Forma parte de la prueba más emblemática de nuestro club. Un evento para triatletas de todos los niveles en el corazón de Getxo.</p>
                 <a href="https://getxotri.com/" class="inline-block bg-red-900 text-white px-8 py-3 rounded-xl font-bold hover:bg-red-800 transition shadow-md">Ver detalles e inscripciones</a>
@@ -162,6 +183,43 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Configuración de la fecha del evento (Año actual para que sea dinámico)
+        const eventDate = new Date('September 26, 2026 16:30:00').getTime();
+
+        const updateCountdown = () => {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            // Cálculos de tiempo
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            const countdownElement = document.getElementById('countdown');
+
+            if (distance < 0) {
+                clearInterval(timerInterval);
+                countdownElement.innerHTML = "¡LA PRUEBA HA COMENZADO!";
+                return;
+            }
+
+            // Formato visual de la cuenta atrás
+            countdownElement.innerHTML = `
+                <div class="flex flex-col"><span class="text-xs uppercase text-gray-400">Días</span>${days}</div>
+                <div class="flex flex-col"><span class="text-xs uppercase text-gray-400">Horas</span>${hours}</div>
+                <div class="flex flex-col"><span class="text-xs uppercase text-gray-400">Min</span>${minutes}</div>
+                <div class="flex flex-col"><span class="text-xs uppercase text-gray-400">Seg</span>${seconds}</div>
+            `;
+        };
+
+        // Actualizar cada segundo
+        const timerInterval = setInterval(updateCountdown, 1000);
+        // Llamada inicial para evitar el retraso de 1 segundo
+        updateCountdown();
+    </script>
 
 </body>
 </html>
