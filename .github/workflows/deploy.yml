@@ -1,0 +1,25 @@
+name: 🚀 Despliegue a Hostalia
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Permite ejecución manual para pruebas
+
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Obtener código
+        uses: actions/checkout@v4
+
+      - name: 📂 Subir archivos vía FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # Hostalia suele usar la raíz o una carpeta llamada /html o /public_html.
+          # Si ves que los archivos no aparecen en tu web, cambia './' por 'html' o 'public_html'
+          server-dir: ./ 
